@@ -1,0 +1,30 @@
+{
+  "name": "@uicraft/core",
+  "version": "1.1.0",
+  "description": "uicraft — beautifully designed UI components built with semantic CSS utility classes",
+  "main": "uicraft.js",
+  "style": "uicraft.css",
+  "files": [
+    "uicraft.css",
+    "uicraft.min.css",
+    "uicraft.js",
+    "uicraft.min.js",
+    "theme-manifest.json",
+    "themes/"
+  ],
+  "keywords": [
+    "ui",
+    "css",
+    "components",
+    "design-system",
+    "utility-classes",
+    "dark-mode"
+  ],
+  "author": "tarasenko-by",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tarasenko-by/uicraft-core.git"
+  },
+  "homepage": "https://getuicraft.com"
+}

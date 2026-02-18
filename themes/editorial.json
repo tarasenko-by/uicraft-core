@@ -1,0 +1,115 @@
+{
+  "name": "editorial",
+  "label": "Editorial",
+  "fontFamily": "'Source Serif 4', Georgia, serif",
+  "radius": {
+    "sm": "6px",
+    "lg": "10px",
+    "xl": "14px",
+    "2xl": "18px",
+    "3xl": "22px"
+  },
+  "spacing": {
+    "0": "0",
+    "0.5": "0.125rem",
+    "1": "0.25rem",
+    "1.5": "0.375rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem"
+  },
+  "fontSize": {
+    "xs": "0.75rem",
+    "sm": "0.875rem",
+    "base": "1rem",
+    "lg": "1.125rem",
+    "xl": "1.25rem",
+    "2xl": "1.5rem",
+    "3xl": "1.875rem",
+    "4xl": "2.25rem"
+  },
+  "fontWeight": {
+    "normal": "400",
+    "medium": "500",
+    "semibold": "600",
+    "bold": "700"
+  },
+  "lineHeight": {
+    "tight": "1.25",
+    "normal": "1.5",
+    "loose": "1.75"
+  },
+  "shadow": {
+    "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+    "default": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+    "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+    "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+    "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
+  },
+  "zIndex": {
+    "dropdown": "1000",
+    "sticky": "1020",
+    "fixed": "1030",
+    "drawer": "1040",
+    "modal": "1050",
+    "popover": "1060",
+    "tooltip": "1070"
+  },
+  "transition": {
+    "fast": "150ms ease",
+    "normal": "200ms ease",
+    "slow": "300ms ease"
+  },
+  "colors": {
+    "constantWhite": "0 0% 100%",
+    "constantBlack": "0 0% 0%",
+    "fgPrimary": "26 14% 16%",
+    "fgSecondary": "26 10% 28%",
+    "fgTertiary": "27 8% 44%",
+    "fgDisabled": "28 6% 58%",
+    "neutralsBackground": "36 30% 97%",
+    "neutralsSurface": "38 30% 99%",
+    "neutralsSubtle": "36 26% 95%",
+    "neutralsMuted": "35 24% 93%",
+    "neutralsEmphasis": "34 18% 88%",
+    "borderDefault": "34 16% 86%",
+    "borderStrong": "31 14% 72%",
+    "accentsGreen": "155 58% 34%",
+    "accentsBlue": "211 74% 45%",
+    "accentsRed": "3 68% 52%",
+    "accentsOrange": "28 80% 49%",
+    "tintRed": "0 100% 96%",
+    "tintGreen": "153 40% 90%",
+    "tintBlue": "212 100% 94%",
+    "tintOrange": "34 100% 95%"
+  },
+  "dark": {
+    "colors": {
+      "fgPrimary": "40 18% 94%",
+      "fgSecondary": "37 14% 80%",
+      "fgTertiary": "35 10% 64%",
+      "fgDisabled": "33 7% 48%",
+      "neutralsBackground": "24 16% 10%",
+      "neutralsSurface": "22 16% 8%",
+      "neutralsSubtle": "24 12% 14%",
+      "neutralsMuted": "25 13% 11%",
+      "neutralsEmphasis": "23 10% 20%",
+      "borderDefault": "23 10% 19%",
+      "borderStrong": "25 10% 29%",
+      "accentsGreen": "155 58% 43%",
+      "accentsBlue": "211 74% 56%",
+      "accentsRed": "3 72% 60%",
+      "accentsOrange": "30 84% 57%",
+      "tintRed": "356 60% 16%",
+      "tintGreen": "153 46% 11%",
+      "tintBlue": "211 53% 16%",
+      "tintOrange": "30 63% 14%"
+    }
+  }
+}
