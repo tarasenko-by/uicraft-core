@@ -1,4 +1,4 @@
-# UiCraft Core
+# uicraft
 
 79 UI components. Pure CSS utility classes, design tokens, dark mode, vanilla JS bundle.
 
@@ -17,7 +17,7 @@
 
 [Download from getuicraft.com](https://getuicraft.com/docs/download)
 
-### npm (coming soon)
+### npm
 
 ```bash
 npm install @uicraft/core
