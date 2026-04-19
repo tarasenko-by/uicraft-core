@@ -32,7 +32,8 @@ var UCAccordion = {
     function openContent(content) {
       content.classList.remove('uc-hidden');
       content.classList.add('open');
-      content.style.maxHeight = content.scrollHeight + 16 + 'px';
+      var pb = parseFloat(getComputedStyle(content).paddingBottom) || 0;
+      content.style.maxHeight = (content.scrollHeight + pb) + 'px';
     }
 
     function closeContent(content) {
@@ -49,7 +50,8 @@ var UCAccordion = {
     document.querySelectorAll('[data-accordion-content]').forEach(function(content) {
       if (!content.classList.contains('uc-hidden') && !content.classList.contains('hidden')) {
         content.classList.add('open');
-        content.style.maxHeight = content.scrollHeight + 16 + 'px';
+        var pb = parseFloat(getComputedStyle(content).paddingBottom) || 0;
+        content.style.maxHeight = (content.scrollHeight + pb) + 'px';
       }
     });
 
@@ -264,7 +266,7 @@ var UCCombobox = {
       var dropdown = document.getElementById(dropdownId);
 
       label.textContent = text;
-      label.classList.remove('uc-text-fg-disabled');
+      label.classList.remove('uc-text-fg-quaternary');
 
       dropdown.querySelectorAll('.uc-combobox-item').forEach(function(i) {
         i.classList.remove('uc-selected');
@@ -784,6 +786,27 @@ function selectItem(id, triggerId, value) {
   dropdown.classList.remove('open');
 }
 
+// UCSlider — paints the filled track portion based on value/min/max
+var UCSlider = {
+  init: function() {
+    document.querySelectorAll('input[type="range"]').forEach(function(input) {
+      if (input.hasAttribute('data-slider-init')) return;
+      input.setAttribute('data-slider-init', 'true');
+
+      function update() {
+        var min = parseFloat(input.min || '0');
+        var max = parseFloat(input.max || '100');
+        var val = parseFloat(input.value || '0');
+        var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
+        input.style.setProperty('--slider-progress', pct + '%');
+      }
+
+      update();
+      input.addEventListener('input', update);
+    });
+  }
+};
+
 // UCToast — programmatic toast notifications
 var UCToast = {
   _count: 0,
@@ -811,10 +834,10 @@ var UCToast = {
       (c.icon ? '<div class="uc-flex-shrink-0 uc-mt-0.5">' + c.icon + '</div>' : '') +
       '<div class="uc-flex-1 uc-min-w-0">' +
         '<p class="uc-text-sm uc-font-semibold">' + c.title + '</p>' +
-        '<p class="uc-text-xs uc-text-fg-disabled uc-mt-0.5">' + c.desc + '</p>' +
+        '<p class="uc-text-xs uc-text-fg-quaternary uc-mt-0.5">' + c.desc + '</p>' +
       '</div>' +
       (c.btn ? '<button onclick="this.parentElement.remove()" class="uc-flex-shrink-0 uc-inline-flex uc-items-center uc-justify-center uc-rounded-lg uc-text-xs uc-font-medium uc-h-7 uc-px-2 uc-border uc-border-border-strong uc-bg-neutrals-surface uc-hover:bg-neutrals-subtle uc-transition-colors">' + c.btn + '</button>' : '') +
-      '<button onclick="this.parentElement.remove()" aria-label="Close" class="uc-flex-shrink-0 uc-p-0.5 uc-text-fg-disabled uc-hover:text-fg-primary uc-transition-colors">' +
+      '<button onclick="this.parentElement.remove()" aria-label="Close" class="uc-flex-shrink-0 uc-p-0.5 uc-text-fg-quaternary uc-hover:text-fg-primary uc-transition-colors">' +
         '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-3.5 uc-h-3.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>' +
       '</button>';
 
@@ -943,6 +966,7 @@ var UCSheet = {
     UCNumberInput.init();
     UCPopover.init();
     UCSelect.init();
+    UCSlider.init();
     UCToast.init();
     UCDialog.init();
     UCTreeView.init();

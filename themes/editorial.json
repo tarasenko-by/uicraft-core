@@ -45,7 +45,8 @@
     "normal": "400",
     "medium": "500",
     "semibold": "600",
-    "bold": "700"
+    "bold": "700",
+    "extrabold": "800"
   },
   "lineHeight": {
     "tight": "1.25",
@@ -79,7 +80,7 @@
     "fgPrimary": "26 14% 16%",
     "fgSecondary": "26 10% 28%",
     "fgTertiary": "27 8% 44%",
-    "fgDisabled": "28 6% 58%",
+    "fgQuaternary": "28 6% 58%",
     "neutralsBackground": "36 30% 97%",
     "neutralsSurface": "38 30% 99%",
     "neutralsSubtle": "36 26% 95%",
@@ -103,7 +104,7 @@
       "fgPrimary": "40 18% 94%",
       "fgSecondary": "37 14% 80%",
       "fgTertiary": "35 10% 64%",
-      "fgDisabled": "33 7% 48%",
+      "fgQuaternary": "33 7% 48%",
       "neutralsBackground": "24 16% 10%",
       "neutralsSurface": "22 16% 8%",
       "neutralsSubtle": "24 12% 14%",

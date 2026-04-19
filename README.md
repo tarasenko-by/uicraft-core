@@ -1,6 +1,6 @@
 # @uicraft/core
 
-uicraft — beautifully designed UI components built with semantic CSS utility classes
+UI component library — pure CSS utility classes, design tokens, dark mode, vanilla JS bundle.
 
 ## Install
 

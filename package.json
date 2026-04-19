@@ -1,31 +1,53 @@
 {
   "name": "@uicraft/core",
-  "version": "1.1.2",
-  "description": "uicraft — beautifully designed UI components built with semantic CSS utility classes",
-  "main": "uicraft.js",
-  "style": "uicraft.css",
+  "version": "1.1.9",
+  "description": "UI component library — pure CSS utility classes, design tokens, dark mode, vanilla JS bundle.",
+  "license": "MIT",
+  "author": "Taras Tarasenko <by.tarasenko@gmail.com>",
+  "homepage": "https://getuicraft.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarasenko-by/uicraft.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tarasenko-by/uicraft/issues"
+  },
+  "keywords": [
+    "ui",
+    "css",
+    "design-system",
+    "components",
+    "design-tokens",
+    "dark-mode",
+    "figma"
+  ],
+  "main": "uicraft.min.js",
+  "style": "uicraft.min.css",
+  "exports": {
+    ".": {
+      "import": "./uicraft.min.js",
+      "default": "./uicraft.min.js"
+    },
+    "./css": "./uicraft.min.css",
+    "./css/unminified": "./uicraft.css",
+    "./js/unminified": "./uicraft.js",
+    "./theme-manifest": "./theme-manifest.json",
+    "./themes/*": "./themes/*"
+  },
   "files": [
     "uicraft.css",
     "uicraft.min.css",
     "uicraft.js",
     "uicraft.min.js",
     "theme-manifest.json",
-    "themes/",
-    "generated/"
+    "themes",
+    "README.md",
+    "LICENSE"
   ],
-  "keywords": [
-    "ui",
-    "css",
-    "components",
-    "design-system",
-    "utility-classes",
-    "dark-mode"
-  ],
-  "author": "tarasenko-by",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tarasenko-by/UiCraft.git"
+  "publishConfig": {
+    "access": "public"
   },
-  "homepage": "https://getuicraft.com"
+  "sideEffects": [
+    "*.css"
+  ]
 }
