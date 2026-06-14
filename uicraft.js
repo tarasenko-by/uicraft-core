@@ -169,7 +169,7 @@ var UCCollapsible = {
 // UCCombobox — searchable single/multi-select with tags
 var UCCombobox = {
   init: function() {
-    var checkSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-4 uc-h-4 uc-shrink-0 uc-text-accents-blue uc-combobox-icon"><path d="M20 6 9 17l-5-5"/></svg>';
+    var checkSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-4 uc-h-4 uc-shrink-0 uc-text-accents-brand uc-combobox-icon"><path d="M20 6 9 17l-5-5"/></svg>';
     var emptySpacer = '<span class="uc-w-4 uc-h-4 uc-shrink-0 uc-combobox-icon"></span>';
     var xTagSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-3 uc-h-3"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
 
@@ -266,7 +266,7 @@ var UCCombobox = {
       var dropdown = document.getElementById(dropdownId);
 
       label.textContent = text;
-      label.classList.remove('uc-text-fg-quaternary');
+      label.classList.remove('uc-text-mains-quaternary');
 
       dropdown.querySelectorAll('.uc-combobox-item').forEach(function(i) {
         i.classList.remove('uc-selected');
@@ -288,12 +288,12 @@ var UCCombobox = {
 
       if (isSelected) {
         var tag = document.createElement('span');
-        tag.className = 'uc-combobox-tag uc-inline-flex uc-items-center uc-gap-1 uc-rounded uc-bg-neutrals-subtle uc-px-2 uc-py-0.5 uc-text-xs uc-font-medium';
+        tag.className = 'uc-combobox-tag uc-inline-flex uc-items-center uc-gap-1 uc-rounded uc-bg-surfaces-subtle uc-px-2 uc-py-0.5 uc-text-xs uc-font-medium';
         tag.setAttribute('data-tag-value', text);
         tag.appendChild(document.createTextNode(text));
         var removeBtn = document.createElement('button');
         removeBtn.type = 'button';
-        removeBtn.className = 'uc-ml-0.5 uc-rounded-sm uc-hover:bg-neutrals-muted uc-transition-colors';
+        removeBtn.className = 'uc-ml-0.5 uc-rounded-sm uc-hover:bg-surfaces-moderate uc-transition-colors';
         removeBtn.innerHTML = xTagSvg;
         removeBtn.addEventListener('click', function(event) {
           event.stopPropagation();
@@ -375,7 +375,7 @@ var UCResizable = {
 
           document.body.style.cursor = isHorizontal ? 'col-resize' : 'row-resize';
           document.body.style.userSelect = 'none';
-          handle.style.background = 'hsl(var(--accents-blue) / 0.5)';
+          handle.style.background = 'hsl(var(--accents-brand) / 0.5)';
         });
 
         document.addEventListener('mousemove', function(e) {
@@ -454,7 +454,7 @@ var UCCarousel = {
         if (dotsContainer) {
           dotsContainer.querySelectorAll('[data-dot]').forEach(function(dot) {
             var idx = parseInt(dot.dataset.dot || '0');
-            dot.className = 'uc-w-2 uc-h-2 uc-rounded-full uc-transition-colors ' + (idx === current ? 'uc-bg-accents-blue' : 'uc-bg-neutrals-muted');
+            dot.className = 'uc-w-2 uc-h-2 uc-rounded-full uc-transition-colors ' + (idx === current ? 'uc-bg-accents-brand' : 'uc-bg-surfaces-moderate');
           });
         }
 
@@ -540,14 +540,14 @@ var UCDropdown = {
 // Checkbox toggle — called via onclick in HTML
 function toggleCheckbox(el) {
   var indicator = el.querySelector('.checkbox-indicator');
-  var isChecked = indicator.classList.contains('uc-bg-accents-blue');
+  var isChecked = indicator.classList.contains('uc-bg-accents-brand');
 
   if (isChecked) {
-    indicator.classList.remove('uc-bg-accents-blue', 'uc-text-constant-white', 'uc-border-transparent');
+    indicator.classList.remove('uc-bg-accents-brand', 'uc-text-generic-white', 'uc-border-transparent');
     indicator.innerHTML = '';
     el.setAttribute('aria-checked', 'false');
   } else {
-    indicator.classList.add('uc-bg-accents-blue', 'uc-text-constant-white', 'uc-border-transparent');
+    indicator.classList.add('uc-bg-accents-brand', 'uc-text-generic-white', 'uc-border-transparent');
     indicator.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="uc-w-3 uc-h-3"><path d="M20 6 9 17l-5-5"/></svg>';
     el.setAttribute('aria-checked', 'true');
   }
@@ -557,15 +557,15 @@ function toggleCheckbox(el) {
 function selectRadio(el) {
   var parent = el.closest('.uc-dropdown-menu');
   parent.querySelectorAll('.radio-indicator').forEach(function(r) {
-    r.classList.remove('uc-border-accents-blue');
+    r.classList.remove('uc-border-accents-brand');
     r.classList.add('uc-border-input');
     r.innerHTML = '';
   });
 
   var indicator = el.querySelector('.radio-indicator');
   indicator.classList.remove('uc-border-input');
-  indicator.classList.add('uc-border-accents-blue');
-  indicator.innerHTML = '<div class="uc-w-2 uc-h-2 uc-rounded-full uc-bg-accents-blue"></div>';
+  indicator.classList.add('uc-border-accents-brand');
+  indicator.innerHTML = '<div class="uc-w-2 uc-h-2 uc-rounded-full uc-bg-accents-brand"></div>';
 }
 
 // UCScrollView — drag-to-scroll and scroll indicators
@@ -818,15 +818,15 @@ var UCToast = {
     var id = 'toast-' + (++UCToast._count);
     var configs = {
       default: { title: 'Scheduled: Catch up', desc: 'Friday, February 14, 2026 at 5:57 PM', icon: '', btn: 'Undo' },
-      success: { title: 'Success', desc: 'Your changes have been saved.', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-5 uc-h-5 uc-text-accents-blue"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>', btn: '' },
-      error: { title: 'Error', desc: 'Something went wrong. Please try again.', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-5 uc-h-5 uc-text-accents-red"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>', btn: 'Retry' },
+      success: { title: 'Success', desc: 'Your changes have been saved.', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-5 uc-h-5 uc-text-accents-brand"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>', btn: '' },
+      error: { title: 'Error', desc: 'Something went wrong. Please try again.', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-5 uc-h-5 uc-text-error-primary"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>', btn: 'Retry' },
       action: { title: 'Event created', desc: 'Sunday, December 03, 2023', icon: '', btn: 'Undo' }
     };
 
     var c = configs[type] || configs.default;
     var toast = document.createElement('div');
     toast.id = id;
-    toast.className = 'uc-flex uc-items-start uc-gap-3 uc-w-80 uc-p-4 uc-rounded-lg uc-border uc-border-border-default uc-bg-neutrals-surface uc-shadow-lg uc-mb-2';
+    toast.className = 'uc-flex uc-items-start uc-gap-3 uc-w-80 uc-p-4 uc-rounded-lg uc-border uc-border-border-default uc-bg-surfaces-surface uc-shadow-lg uc-mb-2';
     toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
     toast.setAttribute('aria-live', type === 'error' ? 'assertive' : 'polite');
     toast.setAttribute('aria-atomic', 'true');
@@ -834,10 +834,10 @@ var UCToast = {
       (c.icon ? '<div class="uc-flex-shrink-0 uc-mt-0.5">' + c.icon + '</div>' : '') +
       '<div class="uc-flex-1 uc-min-w-0">' +
         '<p class="uc-text-sm uc-font-semibold">' + c.title + '</p>' +
-        '<p class="uc-text-xs uc-text-fg-quaternary uc-mt-0.5">' + c.desc + '</p>' +
+        '<p class="uc-text-xs uc-text-mains-quaternary uc-mt-0.5">' + c.desc + '</p>' +
       '</div>' +
-      (c.btn ? '<button onclick="this.parentElement.remove()" class="uc-flex-shrink-0 uc-inline-flex uc-items-center uc-justify-center uc-rounded-lg uc-text-xs uc-font-medium uc-h-7 uc-px-2 uc-border uc-border-border-strong uc-bg-neutrals-surface uc-hover:bg-neutrals-subtle uc-transition-colors">' + c.btn + '</button>' : '') +
-      '<button onclick="this.parentElement.remove()" aria-label="Close" class="uc-flex-shrink-0 uc-p-0.5 uc-text-fg-quaternary uc-hover:text-fg-primary uc-transition-colors">' +
+      (c.btn ? '<button onclick="this.parentElement.remove()" class="uc-flex-shrink-0 uc-inline-flex uc-items-center uc-justify-center uc-rounded-lg uc-text-xs uc-font-medium uc-h-7 uc-px-2 uc-border uc-border-border-strong uc-bg-surfaces-surface uc-hover:bg-surfaces-subtle uc-transition-colors">' + c.btn + '</button>' : '') +
+      '<button onclick="this.parentElement.remove()" aria-label="Close" class="uc-flex-shrink-0 uc-p-0.5 uc-text-mains-quaternary uc-hover:text-mains-primary uc-transition-colors">' +
         '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="uc-w-3.5 uc-h-3.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>' +
       '</button>';
 
