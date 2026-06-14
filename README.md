@@ -101,7 +101,19 @@ Want your own? The **[Theme Generator](https://getuicraft.com/themes/)** lets yo
 
 ## Figma plugin
 
-The **uicraft Figma plugin** inserts the same components directly into Figma with full theme support, so designers and developers work from one source of truth. Load a `theme.json` exported from the Theme Generator and the whole Figma library re-themes instantly. (Available from the main [uicraft repo](https://github.com/tarasenko-by/uicraft).)
+**[uicraft — Design Tokens & UI Components](https://www.figma.com/community/plugin/1610343587499165100/uicraft-design-tokens-ui-components)** is a design system generator for Figma. Select the components you need, customize your theme, and generate production-ready design tokens and UI components directly into your file.
+
+**What it does:**
+
+- Generates Figma Variables — colors, typography, spacing, radius, borders, shadows
+- Creates Light and Dark mode collections automatically
+- Includes 24 UI components: buttons, form controls, navigation, feedback, and data display
+- Lets you customize the theme — brand color, neutrals, typography, and semantic tokens — before generating
+- Outputs a structured, token-driven component library ready to use in your designs
+
+**Who it's for:** Designers and product teams who want a consistent, token-driven foundation without building a design system from scratch.
+
+It shares the same `theme.json` format as the Theme Generator, so a theme designed in code re-themes your Figma library to match.
 
 ## Use with AI agents (MCP)
 
@@ -127,7 +139,7 @@ The site also serves [getuicraft.com/llms.txt](https://getuicraft.com/llms.txt) 
 |----------------|-----------|
 | [`@uicraft/core`](https://www.npmjs.com/package/@uicraft/core) | This package — the CSS + JS distribution bundle |
 | [`@uicraft/mcp-server`](https://www.npmjs.com/package/@uicraft/mcp-server) | MCP server exposing components/tokens/themes to AI agents |
-| uicraft Figma plugin | Insert components into Figma, theme-synced with code |
+| [uicraft Figma plugin](https://www.figma.com/community/plugin/1610343587499165100/uicraft-design-tokens-ui-components) | Generate design tokens + 24 UI components into Figma |
 | [getuicraft.com](https://getuicraft.com) | Docs, live demos, and the Theme Generator |
 | [tarasenko-by/uicraft](https://github.com/tarasenko-by/uicraft) | Main source repo (Astro site + build pipeline) |
 
