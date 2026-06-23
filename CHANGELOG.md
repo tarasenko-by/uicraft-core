@@ -11,6 +11,13 @@ _Add entries here as you work. `npm run release` freezes this section into a
 dated version block. Use the Keep a Changelog headings: Added / Changed /
 Deprecated / Removed / Fixed / Security._
 
+### Fixed
+- Public `@uicraft/core` no longer references the private source repo: package `repository`/`bugs` now point to `tarasenko-by/uicraft-core`, and the README no longer links to the main repo.
+
+### Internal
+- Changelog reminder: a `Stop` hook (`scripts/check-changelog-reminder.mjs`) blocks finishing a turn when product files changed since the last tag but `[Unreleased]` is empty.
+- `publish-core` now ships `CHANGELOG.md` to the public mirror + npm; `release` cuts a GitHub Release on the public repo too.
+
 ## [1.2.1] — 2026-06-24
 
 ### Added

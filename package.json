@@ -7,10 +7,10 @@
   "homepage": "https://getuicraft.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tarasenko-by/uicraft.git"
+    "url": "git+https://github.com/tarasenko-by/uicraft-core.git"
   },
   "bugs": {
-    "url": "https://github.com/tarasenko-by/uicraft/issues"
+    "url": "https://github.com/tarasenko-by/uicraft-core/issues"
   },
   "keywords": [
     "ui",

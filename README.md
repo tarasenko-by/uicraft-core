@@ -6,8 +6,6 @@
 
 ---
 
-> **This repository is the distribution bundle** for the [uicraft](https://github.com/tarasenko-by/uicraft) design system — it mirrors the built `dist-system/` output and is what gets published to npm as `@uicraft/core`. The full source (Astro site, build scripts, Figma plugin, MCP server) lives in the main repo: **[tarasenko-by/uicraft](https://github.com/tarasenko-by/uicraft)**.
-
 ## What is uicraft?
 
 uicraft is a framework-agnostic UI component library delivered as plain CSS and vanilla JavaScript. You style your markup with `uc-` utility classes and drop in `data-*` attributes for interactive behavior — the JS bundle wires everything up automatically. No React, no Tailwind runtime, no bundler needed.
@@ -141,7 +139,6 @@ The site also serves [getuicraft.com/llms.txt](https://getuicraft.com/llms.txt) 
 | [`@uicraft/mcp-server`](https://www.npmjs.com/package/@uicraft/mcp-server) | MCP server exposing components/tokens/themes to AI agents |
 | [uicraft Figma plugin](https://www.figma.com/community/plugin/1610343587499165100/uicraft-design-tokens-ui-components) | Generate design tokens + 24 UI components into Figma |
 | [getuicraft.com](https://getuicraft.com) | Docs, live demos, and the Theme Generator |
-| [tarasenko-by/uicraft](https://github.com/tarasenko-by/uicraft) | Main source repo (Astro site + build pipeline) |
 
 ## License
 
